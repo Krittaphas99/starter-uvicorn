@@ -2,3 +2,8 @@ click==8.1.6
 h11==0.14.0
 typing_extensions==4.7.1
 uvicorn==0.23.2
+fastapi ==0.103.1
+sqlalchemy==2.0.20
+pymysql == 1.1.0
+load_dotenv ==0.1.0
+uvicorn==  0.23.2
