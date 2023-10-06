@@ -1,13 +1,15 @@
-async def app(scope, receive, send):
-    assert scope['type'] == 'http'
-    await send({
-        'type': 'http.response.start',
-        'status': 200,
-        'headers': [
-            [b'content-type', b'text/plain'],
-        ],
-    })
-    await send({
-        'type': 'http.response.body',
-        'body': b'Hello, World!',
-    })
+from fastapi import FastAPI, HTTPException
+# from config import db
+from pydantic import BaseModel
+from fastapi.responses import JSONResponse
+from starlette import status
+# from route.city import cityPath
+# python -m venv venv
+app = FastAPI()
+
+
+
+# app.include_router(cityPath)
+@app.get('/get', status_code=status.HTTP_200_OK)
+async def hello():
+    return "Hello server is workingsssss"
